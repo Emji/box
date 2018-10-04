@@ -13,7 +13,7 @@
     <!-- menu lateral -->
     <div class="menu" onmouseenter="mouseEnter(this);" onmouseleave="mouseLeave(this);">
         <ul>
-            <li id="corpo" class="m-4"><a href="">Corpo</a></li>
+            <li class="m-4"><a id="corpo" onmouseenter="CorpoEnter(this);" href="">Corpo</a></li>
             <li id="Private" class="m-4"><a href="">Private</a></li>
         </ul>
     </div>
@@ -21,14 +21,16 @@
         <div id="insert" class="row">
 
             <!-- ecran info -->
-            <div id="colchange" class="col-12">
+            <div id="colchange" class="col-12 mt-5">
                 <div class="row">
-                    <div class="col-12">
+                    <div id="contenu" class="col-12">
 
                     </div>
+
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <script src="boite.js"></script>

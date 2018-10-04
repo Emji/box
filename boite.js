@@ -31,5 +31,19 @@ function mouseLeave() {
 
 // ------------- GESTION DYNAMIQUE DU CONTENU ---------- 
 
+var CorpoMenu = document.querySelector("#corpo")
+var Contenu = document.querySelector("#contenu")
+
+function CorpoEnter() {
+
+
+    Contenu.classList.add("backgroundcorpo")
+    menuCache.classList.add("menucorpo")
+    Contenu.innerHTML = '<div class="d-flex justify-content-center"><h3 class="text-light">Contenu Corpo</h3>'
+    ColChange.classList.add("animation")
+
+}
+
+
 
 
