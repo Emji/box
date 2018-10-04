@@ -1,31 +1,35 @@
+var menuCache = document.querySelector(".menu");
+var divInsert = document.querySelector("#insert");
+var ColChange = document.querySelector("#colchange");
 
-function mousemove(event) {
+// deployement du menu laterale et modification de la taille de la fenetre texte 
 
-    let menuCache = document.querySelector(".menu")
-    let menuVisible = document.querySelector(".menu2")
-    let corps = document.querySelector(".body");
+function mouseEnter() {
 
-    var x = event.clientX;
-    var y = event.clientY;
-
-    if (x < 20) {
-
-
-        menuCache.classList.add("menu2")
-        menuCache.classList.remove("menu")
-    } else {
-
-    }
-    if (x > 300) {
-
-
-        menuVisible.classList.add("menu")
-        menuVisible.classList.remove("menu2")
-
-    } else {
-
-    }
+    menuCache.classList.add("menu2")
+    menuCache.classList.remove("menu")
+    ColChange.classList.remove("col-12")
+    ColChange.classList.add("col-9")
+    divInsert.insertAdjacentHTML('afterbegin', '<div class="col-3"></div>');
 }
-addEventListener("mousemove", mousemove)
+
+
+// referme le menu et remet la fenetre en col-12
+
+function mouseLeave() {
+
+
+    menuCache.classList.remove("menu2")
+    menuCache.classList.add("menu")
+    divInsert.removeChild((divInsert.getElementsByClassName('col-3')[0]))
+    ColChange.classList.remove("col-9")
+    ColChange.classList.add("col-12")
+
+}
+
+
+
+// ------------- GESTION DYNAMIQUE DU CONTENU ---------- 
+
 
 
